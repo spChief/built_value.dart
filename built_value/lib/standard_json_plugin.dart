@@ -125,7 +125,7 @@ class StandardJsonPlugin implements SerializerPlugin {
       }
     }
 
-    var result = <String, Object>{discriminator: type};
+    var result = <String, Object?>{discriminator: type};
     for (var i = 0; i != (list.length - 1) ~/ 2; ++i) {
       final key = needToEncodeKeys
           ? _encodeKey(list[i * 2 + 1])
